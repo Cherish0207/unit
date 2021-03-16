@@ -1,7 +1,7 @@
 {
   "name": "unit",
   "version": "1.0.0",
-  "description": "单元测试",
+  "description": "dir: 6 期视频/vue/2020 架构课 Vue 阶段/第 5 章 单元测试篇/",
   "main": "1.parse.test.js",
   "scripts": {
     "test": "jest --coverage --watchAll"

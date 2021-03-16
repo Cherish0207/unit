@@ -17,7 +17,8 @@ it("测试回调函数", () => {
     // 如果开发代码中需要等待6s以上，会超时
     // --不可能真的等待那么久
     // jest默认具备mock的能力 --> 对时间进行mock
-    expect(data).toEqual({ name: "zf1" });
+    expect(data).toEqual({ name: "zf" });
   });
-  jest.runAllTimers(); // 运行所有的定时器
+  jest.runOnlyPendingTimers(); // 只运行当前等待队列的一个
+  // jest.advanceTimersByTime(100100); // 快进xx毫秒
 });

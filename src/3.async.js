@@ -1,6 +1,6 @@
 // 异步代码
 export const getDataCallback = (fn) => {
-  setTimeout(() => {
+  setInterval(() => {
     fn({ name: "zf" });
   }, 100000);
 };

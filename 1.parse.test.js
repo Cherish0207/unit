@@ -1,6 +1,6 @@
 // 测试文件默认一般以.test.js结尾/spec.js结尾
 import { expect } from "@jest/globals";
-import { parser, stringify } from "./1.parser";
+import { parser, stringify } from "./src/1.parser";
 // describe: 套件,里面放的是一堆用例(it)
 describe("测试parser", () => {
   it("测试parser是否能正常解析", () => {

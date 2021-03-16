@@ -10,20 +10,21 @@ import { getDataCallback, getDataPromise } from "./src/3.async";
  *    useFakeTimers+runAllTimers
  */
 
-// jest.useFakeTimers();
-it("测试回调函数", () => {
+it("测试回调函数", (done) => {
+  // jest.useFakeTimers();
   getDataCallback((data) => {
     // 默认不会等待异步执行完毕后才执行
     // 如果开发代码中需要等待6s以上，会超时
     // --不可能真的等待那么久
     // jest默认具备mock的能力 --> 对时间进行mock
     expect(data).toEqual({ name: "zf" });
+    done();
   });
-  jest.runOnlyPendingTimers(); // 只运行当前等待队列的一个
+  // jest.runOnlyPendingTimers(); // 只运行当前等待队列的一个
   // jest.advanceTimersByTime(100100); // 快进xx毫秒
 });
 
-it.only("测试当前的promise执行的预期 ", async () => {
+it("测试当前的promise执行的预期 ", async () => {
   let data = await getDataPromise();
   expect(data).toEqual({ name: "zf" });
 });

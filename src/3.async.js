@@ -1,8 +1,8 @@
 // 异步代码
 export const getDataCallback = (fn) => {
-  setInterval(() => {
+  setTimeout(() => {
     fn({ name: "zf" });
-  }, 100000);
+  }, 1000);
 };
 export const getDataPromise = () => {
   return new Promise((resolve, reject) => {

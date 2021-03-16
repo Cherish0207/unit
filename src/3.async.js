@@ -2,5 +2,5 @@
 export const getDataCallback = (fn) => {
   setTimeout(() => {
     fn({ name: "zf" });
-  }, 1000);
+  }, 100000);
 };
